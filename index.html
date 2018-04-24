@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>GPU Part Picker</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div class="site">
+  <div class="header">GPU Parts</div>
+  <div class="sidebar">Filters
+    <div><span>
+        <div class="title arrow-down" data-id="p">Price</div></span>
+      <ul id="p-list">
+        <li>
+          <input class="p_filter" type="checkbox" id="p_all" checked="checked"/>
+          <label for="p_all">All</label>
+        </li>
+        <li>
+          <input class="p_filter" type="checkbox" id="p_1" p-min="0" p-max="100"/>
+          <label for="p_1">Less than $100</label>
+        </li>
+        <li>
+          <input class="p_filter" type="checkbox" id="p_2" p-min="100" p-max="250"/>
+          <label for="p_2">$100 - $250</label>
+        </li>
+        <li>
+          <input class="p_filter" type="checkbox" id="p_3" p-min="250" p-max="500"/>
+          <label for="p_3">$250 - $500</label>
+        </li>
+        <li>
+          <input class="p_filter" type="checkbox" id="p_4" p-min="500" p-max="750"/>
+          <label for="p_4">$500 - $750</label>
+        </li>
+      </ul>
+    </div>
+    <div id="model-filter-div">
+      <div class="title arrow-down" data-id="m">Model</div>
+      <ul id="m-list"></ul>
+    </div>
+  </div>
+  <div class="main">Parts
+    <div class="searchbar">Search for GPUs:
+      <input type="text" id="searchFilter" placeholder="Search"/>
+    </div>
+    <hr/>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th data-type="Product Name">Name
+            <button class="arrow-up" data-dir="asc"></button>
+            <button class="arrow-down" data-dir="dsc"></button>
+          </th>
+          <th data-type="GPU Chip">Model
+            <button class="arrow-up" data-dir="asc"></button>
+            <button class="arrow-down" data-dir="dsc"></button>
+          </th>
+          <th data-type="Price">Price
+            <button class="arrow-up" data-dir="asc"></button>
+            <button class="arrow-down" data-dir="dsc"></button>
+          </th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="fbody"></tbody>
+    </table>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.4.3/tabletop.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
